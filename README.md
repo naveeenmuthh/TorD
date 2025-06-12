@@ -1,4 +1,4 @@
-# Truth or Dare 
+# Truth or Dare Game:
 
 1) Recommended to play over a Mobile device.
 
