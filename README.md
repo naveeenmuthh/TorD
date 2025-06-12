@@ -6,7 +6,7 @@
 
 3) Use Show Table to Monitor the players and the number of truth and dare a player gets in a game. 
 
-4) That's it I hope you know the rules, otherwise Google it!!
+4) That's it I hope you know the rules, otherwise Google it.
 
 5) Good Luck!! Hope y'all have fun!!
 
