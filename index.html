@@ -16,19 +16,19 @@
       margin: 20px auto; 
       border-radius: 50%; 
       border: 2px dashed #fff; 
-      overflow: visible; /* allow player labels to overflow */
+      overflow: visible;
     }
     #bottle {
       width: 25%;
       height: 75%;
-      background: url('beer-bottle.webp') no-repeat center/contain;
+      background: url('beer-bottle.png') no-repeat center/contain;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%) rotate(0deg);
       transform-origin: center center;
       transition: transform 3s ease-out;
-      z-index: 2; /* ensure bottle stays below labels */
+      z-index: 2;
     }
     #bottle::before {
       content: 'T';
@@ -60,11 +60,10 @@
       max-width: 30px;
       max-height: 30px;
       line-height: 8vw;
-      max-line-height: 30px;
       text-align: center;
       color: #fff;
       border: 1px solid #fff;
-      z-index: 5; /* ensure labels stay above bottle */
+      z-index: 5;
     }
     #scoreModal {
       display: none;
@@ -73,6 +72,7 @@
       background: rgba(0, 0, 0, 0.8);
       justify-content: center;
       align-items: center;
+      z-index: 10;
     }
     #scoreModalContent {
       background: #333;
@@ -101,7 +101,7 @@
   </label>
   <button onclick="spinBottle()">Spin</button>
   <button onclick="resetGame()">Reset</button>
-  <button onclick="toggleModal()">Show Stats</button>
+  <button onclick="toggleModal()">Show Table</button>
   <div id="gameContainer">
     <div id="bottle"></div>
   </div>
@@ -136,7 +136,7 @@
     function renderPlayerLabels(playerCount) {
       const container = document.getElementById('gameContainer');
       container.querySelectorAll('.playerLabel').forEach(e => e.remove());
-      const radius = container.offsetWidth / 2 - 20;
+      const radius = container.offsetWidth / 2 - 30;
       const offset = -90;
       for (let i = 0; i < playerCount; i++) {
         const angle = ((i * 360 / playerCount) + offset) * Math.PI / 180;
